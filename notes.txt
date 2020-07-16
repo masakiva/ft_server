@@ -1,0 +1,18 @@
+download from docker-hub: 		docker pull centos
+run docker image: 				docker run -t --name acertainname centos (-d to run in bg)
+map container expose port to local port: -p host:container (e.g. 8080:80 to map http port of nginx to localhost:8080)
+sync a folder in the container to a local folder: -v host:container (e.g. /home/ah/42/ft_server/src:/usr/share/nginx/html:ro with ro for read-only)
+logs of a running container:	docker logs acertainname (-f to leave open)
+status of running containers: 	docker ps (-a to see stopped ones)
+with statistics:				docker stats
+connect to centos shell:		docker exec -it acertainname bash
+stop docker container:			docker stop acertainname
+start stopped container:		docker start acertainname
+remove container:				docker rm acertainname
+
+continue at https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/
+dockerfile reference: https://docs.docker.com/engine/reference/builder/
+
+recherches:
+"install debian lemp"
+"clefs ssl lemp"
