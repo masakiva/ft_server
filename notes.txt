@@ -13,6 +13,8 @@ remove container:				docker rm acertainname
 run & connect to alpine shell:	docker run --rm -ti alpine-smarter:1.0 /bin/sh
 list intermediate build images:	docker images -a (Only RUN, COPY and ADD instructions create layers to improve build performance.)
 
+build img from dockerfile dir:	docker build -t debian-server:1.0 .
+
 
 dockerfile reference: https://docs.docker.com/engine/reference/builder/
 ft_server quick start https://harm-smits.github.io/42docs/projects/ft_server.html
