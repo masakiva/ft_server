@@ -23,10 +23,7 @@ check if it is running:			service nginx status
 
 start mariadb/mysql:			service mysql start
 
-dl phpmyadmin:					cd /tmp
-								wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-english.tar.gz
-								tar -xzf phpMyAdmin-5.0.2-english.tar.gz
-								mv phpMyAdmin-5.0.2-english /usr/share/phpmyadmin
+latest phpmyadmin https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-english.tar.gz
 
 
 dockerfile reference: https://docs.docker.com/engine/reference/builder/

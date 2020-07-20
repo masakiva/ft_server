@@ -1,6 +1,8 @@
 FROM debian:buster
 
-RUN	apt-get update && apt-get -y install nginx
-RUN apt-get update && apt-get -y install mariadb-server
-RUN apt-get update && apt-get -y install php-fpm php-mysql
-RUN apt-get update && apt-get -y install php-mbstring php-zip php-gd
+WORKDIR /tmp
+COPY srcs .
+RUN ./setup_nginx.sh
+RUN ./setup_mariadb.sh
+RUN ./setup_phpmyadmin.sh
+CMD ["./init_services.sh"]
