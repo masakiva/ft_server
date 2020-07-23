@@ -17,7 +17,4 @@ WORKDIR /tmp
 COPY srcs .
 RUN ./setup_nginx.sh
 RUN ./setup_phpmyadmin.sh
-#RUN apt-get -y purge \
-#		wget
-#RUN apt-get -y autoremove
 CMD ["./init_services.sh"]
