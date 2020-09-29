@@ -1,6 +1,3 @@
-todo:
-	script for mysql_secure_installation?
-
 download from docker-hub: 		docker pull centos
 run docker image: 				docker run -t --name acertainname centos (-d to run in bg)
 map container expose port to local port: -p host:container (e.g. 8080:80 to map http port of nginx to localhost:8080)
@@ -18,27 +15,27 @@ list intermediate build images:	docker images -a (Only RUN, COPY and ADD instruc
 
 build img from dockerfile dir:	docker build -t debian-server:1.0 .
 list dangling images:			docker images --filter "dangling=true"
+rm dangling images:				docker image prune
 
 
 run nginx server:				nginx (or service nginx start)
 stop nginx server:				nginx -s quit
 check if it is running:			service nginx status
+check config:					nginx -t
 
 start mariadb/mysql:			service mysql start
 
 dockerfile reference: https://docs.docker.com/engine/reference/builder/
 ft_server quick start https://harm-smits.github.io/42docs/projects/ft_server.html
-install nginx php mysql https://invidio.us/watch?v=eVmUqh_HMKA
-install phpmyadmin https://docs.phpmyadmin.net/en/latest/setup.html#quick-install
-install wordpress https://www.tecmint.com/install-wordpress-alongside-lamp-on-debian-10/
-wordpress with lemp https://invidio.us/watch?v=4beEybPzYqQ
 liens Halim/ecross:
 	https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/
 	https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-debian-10
 	https://www.digitalocean.com/community/tutorials/how-to-install-phpmyadmin-from-source-debian-10
 	https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lemp-nginx-mariadb-and-php-on-debian-10
 	https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-debian-10
+install nginx php mysql https://invidio.us/watch?v=eVmUqh_HMKA
+install phpmyadmin https://docs.phpmyadmin.net/en/latest/setup.html#quick-install
+install wordpress https://www.tecmint.com/install-wordpress-alongside-lamp-on-debian-10/
+wordpress with lemp https://invidio.us/watch?v=4beEybPzYqQ
 
-recherches:
-"install debian lemp"
-"clefs ssl lemp"
+42l dockerfiles https://git.42l.fr/42l/core

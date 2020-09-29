@@ -1,7 +1,13 @@
 #!/bin/bash
 
-service nginx start
 service mysql start
-php_version=`ls /etc/init.d/ | grep -E "php[0-9.]+-fpm"`
-service "$php_version" start
+# create mariadb user and database for wordpress
+cat /tmp/setup_db.sql | mysql --user=root
+
+service php7.3-fpm start
+
+service nginx start
+
+cd /
+
 bash
