@@ -61,5 +61,3 @@ Here are some resources that you may find useful when working on this project:
 - [MySQL documentation](https://dev.mysql.com/doc/)
 - [WordPress documentation](https://wordpress.org/support/)
 - [Self-signed SSL certificate tutorial](https://www.linode.com/docs/security/ssl/create-a-self-signed-tls-certificate/)
-
-Good luck with the project!
